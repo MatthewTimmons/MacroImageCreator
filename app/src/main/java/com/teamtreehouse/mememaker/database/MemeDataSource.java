@@ -105,7 +105,7 @@ public class MemeDataSource {
 
         ContentValues memeValues = new ContentValues();
         memeValues.put(MemeSQLiteHelper.COLUMN_MEME_NAME, meme.getName());
-        memeValues.put(MemeSQLiteHelper.COLUMN_MEME_NAME, meme.getAssetLocation());
+        memeValues.put(MemeSQLiteHelper.COLUMN_MEME_ASSET, meme.getAssetLocation());
         long memeID = database.insert(MemeSQLiteHelper.MEMES_TABLE, null, memeValues);
 
         for (MemeAnnotation annotation : meme.getAnnotations()) {

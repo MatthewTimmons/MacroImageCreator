@@ -50,8 +50,8 @@ public class CreateMemeActivity extends Activity {
         mMemeContainer = (FrameLayout) findViewById(R.id.meme_container);
         mMemeBitmapHolder = (MemeImageView) findViewById(R.id.meme_bitmap_container);
 
-        if(this.getIntent().hasExtra(EXTRA_IMAGE_FILE_PATH)) {
-            mImageFilePath = this.getIntent().getStringExtra(EXTRA_IMAGE_FILE_PATH);
+        if(getIntent().hasExtra(EXTRA_IMAGE_FILE_PATH)) {
+            mImageFilePath = getIntent().getStringExtra(EXTRA_IMAGE_FILE_PATH);
             mCurrentMeme = new Meme(-1, mImageFilePath, "", null);
         } else {
             mCurrentMeme = (Meme)this.getIntent().getSerializableExtra(EXTRA_MEME_OBJECT);
